@@ -32,9 +32,27 @@ const team =[
         "picture": `barbara-ramos-graphic-designer.jpg`
     }
 ]
-// console.log(team);
+// // console.log(team);
+// function myfunction(){
+//     document.createElement(`ul`);
+//     console.log(myfunction);
+// for(i=0; i<team.length; i++){
+//     document.createElement(`ul`).innerHTML=;
+//     for (let key in team[i]){
+//         console.log(team[i][key]);
+//     }
+// }
+// }
+
+
+
 for(i=0; i<team.length; i++){
+    const member = document.createElement(`div`);
+    document.body.appendChild(member);
+    console.log(member);
     for (let key in team[i]){
         console.log(team[i][key]);
+        let data = team[i][key];
+        member.append(data);
     }
 }
