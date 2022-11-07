@@ -47,12 +47,29 @@ const team =[
 
 
 for(i=0; i<team.length; i++){
-    const member = document.createElement(`div`);
-    document.body.appendChild(member);
-    console.log(member);
+    // const member = document.createElement(`div`);
+    // document.body.appendChild(member);
+    // console.log(member);
     for (let key in team[i]){
-        console.log(team[i][key]);
-        let data = team[i][key];
-        member.append(data);
+        console.log(key, team[i][key]);
+        // const member = document.createElement(`div`);
+        // document.body.appendChild(member);
+        if (key === `memberName`){
+            const memberNameBox = document.createElement(`div`);
+            memberNameBox.append(team[i][key]);
+            document.body.appendChild(memberNameBox);
+        } else if (key ===`role`){
+            const memberRoleBox = document.createElement(`div`);
+            memberRoleBox.append(team[i][key]);
+            document.body.appendChild(memberRoleBox);
+        }
+        else if (key === `picture`){
+            const memberImgBox = document.createElement(`div`);
+            memberImgBox.append(team[i][key]);
+            document.body.appendChild(memberImgBox);
+        }
+        }
+        // let data = team[i][key];
+        // member.append(data);
     }
-}
+
