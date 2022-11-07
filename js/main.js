@@ -64,8 +64,10 @@ for(i=0; i<team.length; i++){
             document.body.appendChild(memberRoleBox);
         }
         else if (key === `picture`){
-            const memberImgBox = document.createElement(`div`);
-            memberImgBox.append(team[i][key]);
+            const memberImgBox = document.createElement(`img`);
+            let imgSrc = `../img/` + team[i][key];
+            memberImgBox.src = imgSrc;
+            // memberImgBox.append(team[i][key]);
             document.body.appendChild(memberImgBox);
         }
         }
