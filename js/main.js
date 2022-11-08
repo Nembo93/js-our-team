@@ -65,10 +65,11 @@ for(i=0; i<team.length; i++){
         }
         else if (key === `picture`){
             const memberImgBox = document.createElement(`img`);
-            let imgSrc = `../img/` + team[i][key];
+            let imgSrc = `.//img/img/` + team[i][key];
             memberImgBox.src = imgSrc;
             // memberImgBox.append(team[i][key]);
             document.body.appendChild(memberImgBox);
+            console.log(imgSrc);
         }
         }
         // let data = team[i][key];
